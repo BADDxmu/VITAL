@@ -1,4 +1,10 @@
-#! /bin/sh
+#!/bin/sh
+# Original script derived from: https://github.com/facebookresearch/esm
+# Copyright (c) Meta Platforms, Inc. and affiliates.
+# Modifications Copyright (c) 2025, BADD-XMU
+#
+# This script is licensed under the MIT License.
+
 # Usage: bash <repo>/esm/scripts/download_weights.sh /path/to/weights/
 # re run the command to continue downloading incomplete files.
 echo $0

@@ -1,11 +1,17 @@
+#!/usr/bin/env python3
+# Original file derived from: https://github.com/jas-preet/SPOT-1D-Single
+# Copyright (c) Original SPOT-1D Authors
+# Modifications Copyright (c) 2025, BADD-XMU
+#
+# This source code is licensed under the MIT License.
+# The original license and copyright notice are preserved.
+
+
 import torch
 import numpy as np
-# from dataset.dataset_inference import text_collate_fn
-# from dataset.data_functions import pickle_load, read_list
 from .dataset.dataset_inference import ProteinDataset, text_collate_fn
 from .dataset.data_functions import pickle_load
 from torch.utils.data import DataLoader
-# from main import classification, regression, write_csv
 from .main import classification, regression, write_csv
 import argparse
 import os
