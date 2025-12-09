@@ -1,0 +1,3 @@
+pair_id,feature_dict_path
+PePI_1A1M_C_A,./datasets/VITAL/PePPI/feature_dict/PePI_1A1M_C_A
+PePI_1A3R_C_5W5C_E,./datasets/VITAL/PePPI/feature_dict/PePI_1A3R_C_5W5C_E
