@@ -1,8 +1,10 @@
-# VITAL
+# VITAL: *A Deep Learning Framework for Affinity Prediction and Interface Mapping of Peptide–Protein Interactions*
 VITAL is a deep learning framework that co-learns local structural geometries and global sequence contexts to enable quantitative peptide–protein interaction (PepPI) characterization.
 
-![Model architecture](picture/model_arch.tif)
+## VITAL
+![Model architecture](picture/figure1.png)
 
+## Contents
 <details open><summary><b>Table of contents</b></summary>
 
 - [Code organization](#code-org)
@@ -14,7 +16,7 @@ VITAL is a deep learning framework that co-learns local structural geometries an
 - [Web server](#server)
 </details>
 
-### Code organization <a name="code-org"></a>
+## Code organization <a name="code-org"></a>
 * `ckpts/` - Pretrained model checkpoints
 * `datasets/` - Example datasets used for training and evaluation?
 * `data_processing/` - Tools and utilities for feature extraction and preprocessing
@@ -25,21 +27,21 @@ VITAL is a deep learning framework that co-learns local structural geometries an
 * `run_feature.sh` - Shell script for executing the full feature extraction pipeline
 * `run_prediction.sh` - Shell script for performing model prediction
 
-### Requirement <a name="require"></a>
+## Requirement <a name="require"></a>
 All experiments were conducted using PyTorch 1.12.1 and Python 3.9 on a server equipped with an NVIDIA GeForce RTX 3090 GPU (CUDA 11.4).
 
-### Usage <a name="usage"></a>
-#### Installation <a name="install"></a>
+## Usage <a name="usage"></a>
+### Installation <a name="install"></a>
 Follow the steps below to set up the environment and install all dependencies.
 
-**1. Clone the repository**
+#### 1 Clone the repository
 
 ```text
 git clone https://github.com/BADD-XMU/VITAL.git
 cd VITAL
 ```
 
-**2. Create the Conda environment**
+#### 2 Create the Conda environment
 
 We provide an `env.yml` file for reproducible environment setup.
 
@@ -47,8 +49,48 @@ We provide an `env.yml` file for reproducible environment setup.
 conda env create -f env.yml
 conda activate VITAL
 ```
+#### 3 Download pretrained model
+⚠️ ***Important notice on third-party tools**: Users are now required to install the corresponding tools independently from their official repositories, and configure the paths accordingly. This does not affect the reproducibility of our results, as all feature extraction strictly follows the official implementations.*
 
-#### Feature Extraction <a name="feature"></a>
+##### 3.1 Install iFeature
+```text
+cd data_processing
+git clone https://github.com/Superzchen/iFeature.git
+cd ..
+```
+
+##### 3.2 Install SPOT-1D-Single
+```text
+cd data_processing # Skip this step if you are already in this directory.
+git clone https://github.com/jas-preet/SPOT-1D-Single.git SPOT_1D_Single
+cp utils/spot1d_single2.py SPOT_1D_Single
+cp utils/__init__.py SPOT_1D_Single
+```
+
+* Note: If you encounter the `mkl-service_error` error, please ensure the following environment variables are set:
+    ```
+    export MKL_THREADING_LAYER=GNU
+    export MKL_SERVICE_FORCE_INTEL=1
+    ```
+
+##### 3.3 Install ESM and download pretrained models
+```text
+cd data_processing # Skip this step if you are already in this directory.
+git clone https://github.com/facebookresearch/esm.git ESM-2
+cp utils/extract.py ESM-2/scripts
+```
+
+To download the pretrained ESM-2 model weights, run the following commands:
+```
+cp utils/download_weights.sh ESM-2/scripts
+cd ESM-2
+bash scripts/download_weights.sh
+```
+
+* Note: If `aria2c` is not installed, please install it and run bash script again. 
+    * Alternatively, you may download the model weights from the official manually [ESM repository](https://github.com/facebookresearch/esm).
+
+### Feature Extraction <a name="feature"></a>
 Before using VITAL for inference, you need to generate all required features.  
 Run the full feature extraction pipeline:
 
@@ -69,7 +111,7 @@ The script will:
 * Generate sequence-based and structure-related features
 * Save processed feature dictionaries into `./datasets/example_feature/`
 
-#### Inference <a name="inference"></a>
+### Inference <a name="inference"></a>
 Run the full inference pipeline:
 
 ```text
@@ -94,8 +136,9 @@ The inference script will:
 * Produce prediction scores and ASM for each protein–peptide pair
 * Inference results will be saved to prediction_results.csv by default.
 
-### Web server <a name="server"></a>
+## Web server <a name="server"></a>
 You can access and use VITAL through the [VITAL-web-server](https://www.vital-peppi.online/).
+
 
 
 
