@@ -11,7 +11,7 @@ VITAL is a deep learning framework that co-learns local structural geometries an
 - [Requirement](#require)
 - [Usage](#usage)
     - [Installation](#install)
-    - [Feature Extraction](#feature)
+    - [Feature extraction](#feature)
     - [Inference](#inference)
 - [Web server](#server)
 </details>
@@ -41,7 +41,7 @@ git clone https://github.com/BADD-XMU/VITAL.git
 cd VITAL
 ```
 
-#### 2 Create the Conda environment
+#### 2 Create the conda environment
 
 We provide an `env.yml` file for reproducible environment setup.
 
@@ -89,7 +89,7 @@ bash scripts/download_weights.sh
 
 * Note: If `aria2c` is not installed, you may download the model weights (`esm2_t30_150M_UR50D-contact-regression.pt` and `esm2_t30_150M_UR50D.pt`) manually from the official [ESM repository](https://github.com/facebookresearch/esm).
 
-### Feature Extraction <a name="feature"></a>
+### Feature extraction <a name="feature"></a>
 Before using VITAL for inference, you need to generate all required features.  
 1. Prepare your **peptide and protein sequences** and save them as **FASTA files**.
 2. Create a pair list file specifying peptide–protein pairs for prediction.
@@ -158,6 +158,7 @@ The inference script will:
 
 ## Web server <a name="server"></a>
 You can access and use VITAL through the [VITAL-web-server](https://www.vital-peppi.online/).
+
 
 
 
