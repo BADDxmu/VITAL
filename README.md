@@ -87,8 +87,7 @@ cd ESM-2
 bash scripts/download_weights.sh
 ```
 
-* Note: If `aria2c` is not installed, please install it and run bash script again. 
-    * Alternatively, you may download the model weights (`esm2_t30_150M_UR50D-contact-regression.pt` and `esm2_t30_150M_UR50D.pt`) from the official manually [ESM repository](https://github.com/facebookresearch/esm).
+* Note: If `aria2c` is not installed, you may download the model weights (`esm2_t30_150M_UR50D-contact-regression.pt` and `esm2_t30_150M_UR50D.pt`) manually from the official [ESM repository](https://github.com/facebookresearch/esm).
 
 ### Feature Extraction <a name="feature"></a>
 Before using VITAL for inference, you need to generate all required features.  
@@ -159,6 +158,7 @@ The inference script will:
 
 ## Web server <a name="server"></a>
 You can access and use VITAL through the [VITAL-web-server](https://www.vital-peppi.online/).
+
 
 
 
