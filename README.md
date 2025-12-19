@@ -91,7 +91,7 @@ bash scripts/download_weights.sh
 
 ### Feature Extraction <a name="feature"></a>
 Before using VITAL for inference, you need to generate all required features.  
-1. Prepare your **peptide and protein sequences** and save them as **FASTA files** under the `datasets/` directory.
+1. Prepare your **peptide and protein sequences** and save them as **FASTA files**.
 2. Create a pair list file specifying peptide–protein pairs for prediction.
 Each line should contain one peptide ID and one protein ID, separated by a **tab** (\t), as shown below:
    
@@ -158,6 +158,7 @@ The inference script will:
 
 ## Web server <a name="server"></a>
 You can access and use VITAL through the [VITAL-web-server](https://www.vital-peppi.online/).
+
 
 
 
