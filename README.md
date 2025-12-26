@@ -37,7 +37,7 @@ Follow the steps below to set up the environment and install all dependencies.
 #### 1 Clone the repository
 
 ```text
-git clone https://github.com/BADD-XMU/VITAL.git
+git clone git@github.com:BADDxmu/VITAL.git
 cd VITAL
 ```
 
@@ -158,6 +158,7 @@ The inference script will:
 
 ## Web server <a name="server"></a>
 You can access and use VITAL through the [VITAL-web-server](https://www.vital-peppi.online/).
+
 
 
 
