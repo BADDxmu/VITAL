@@ -67,7 +67,7 @@ cp utils/spot1d_single2.py SPOT_1D_Single
 cp utils/__init__.py SPOT_1D_Single
 ```
 
-* Note: If you encounter the `mkl-service_error` error, please ensure the following environment variables are set:
+**Note**: If you encounter the `mkl-service_error` error, please ensure the following environment variables are set:
     ```
     export MKL_THREADING_LAYER=GNU
     export MKL_SERVICE_FORCE_INTEL=1
@@ -158,6 +158,7 @@ The inference script will:
 
 ## Web server <a name="server"></a>
 You can access and use VITAL through the [VITAL-web-server](https://www.vital-peppi.online/).
+
 
 
 
