@@ -50,7 +50,7 @@ conda env create -f env.yml
 conda activate VITAL
 ```
 #### 3 Download pretrained model
-⚠️ ***Important notice on third-party tools**: Users are now required to install the corresponding tools independently from their official repositories, and configure the paths accordingly. This does not affect the reproducibility of our results, as all feature extraction strictly follows the official implementations.*
+***Important notice on third-party tools**: Users are now required to install the corresponding tools independently from their official repositories, and configure the paths accordingly. This does not affect the reproducibility of our results, as all feature extraction strictly follows the official implementations.*
 
 ##### 3.1 Install iFeature
 ```text
@@ -65,6 +65,8 @@ cd data_processing # Skip this step if you are already in this directory.
 git clone https://github.com/jas-preet/SPOT-1D-Single.git SPOT_1D_Single
 cp utils/spot1d_single2.py SPOT_1D_Single
 cp utils/__init__.py SPOT_1D_Single
+cp utils/dataset_inference.py SPOT_1D_Single
+cp utils/main.py SPOT_1D_Single
 ```
 
 **Note**: If you encounter the `mkl-service_error` error, please ensure the following environment variables are set:
@@ -82,12 +84,14 @@ cp utils/extract.py ESM-2/scripts
 
 To download the pretrained ESM-2 model weights, run the following commands:
 ```
+# Ensure you are in the `data_processing` directory
+mkdir ESM-2/checkpoints
 cp utils/download_weights.sh ESM-2/scripts
 cd ESM-2
 bash scripts/download_weights.sh
 ```
 
-**Note**: If `aria2c` is not installed, you may download the model weights (`esm2_t30_150M_UR50D-contact-regression.pt` and `esm2_t30_150M_UR50D.pt`) manually from the official [ESM repository](https://github.com/facebookresearch/esm).
+**Note**: If `aria2c` is not installed, you may download the model weights (`esm2_t30_150M_UR50D-contact-regression.pt` and `esm2_t30_150M_UR50D.pt`) manually from the official [ESM repository](https://github.com/facebookresearch/esm) and place them in the `checkpoints/` directory.
 
 ### Feature extraction <a name="feature"></a>
 Before using VITAL for inference, you need to generate all required features.  
@@ -158,6 +162,7 @@ The inference script will:
 
 ## Web server <a name="server"></a>
 You can access and use VITAL through the [VITAL-web-server](https://www.vital-peppi.online/).
+
 
 
 
