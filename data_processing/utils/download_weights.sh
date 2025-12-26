@@ -47,11 +47,7 @@ cat $run_dir/../README.md |grep -e '^|' |grep -e 'fair-esm/models' |tr -d '|' | 
       url_basename=url_arr[url_basename_idx]
 
       # ---- Only download esm2_t30_150M_UR50D ----
-      if (
-          url_basename != "esm2_t30_150M_UR50D.pt"
-      ) {
-          next
-      }
+      if (url_basename != "esm2_t30_150M_UR50D.pt") { next; }
 
       # build regression url
       url_regression=url;
