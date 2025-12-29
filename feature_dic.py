@@ -21,7 +21,7 @@ def feature_dic():
 
     # path_load = args.load_fasta
     path_save = args.save_path
-
+    
     padding_segment.padding_segment(load_list=args.load_list, path_load=args.load_fasta)
     print('ESM2 start')
     ESM2.esm()

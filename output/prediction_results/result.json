@@ -5,7 +5,7 @@
         "successful_predictions": 10,
         "failed_predictions": 0,
         "success_rate": 100.0,
-        "timestamp": "2025-12-05 20:10:30"
+        "timestamp": "2025-12-30 00:21:16"
     },
     "results": [
         {
@@ -15,10 +15,10 @@
                 "probability": 0.9992,
                 "predicted_label": 1,
                 "ASM_path": "./output/ASM/ASM_4HVU_B_4HVU_A.npy",
-                "duration_seconds": 0.54
+                "duration_seconds": 5.6
             },
             "feature_dict_path": "./datasets/example_feature/feature_dic/4HVU_B_4HVU_A",
-            "timestamp": "2025-12-05 20:10:29"
+            "timestamp": "2025-12-30 00:21:12"
         },
         {
             "pair_id": "6DHE_T_6DHE_E",
@@ -27,10 +27,10 @@
                 "probability": 0.9878,
                 "predicted_label": 1,
                 "ASM_path": "./output/ASM/ASM_6DHE_T_6DHE_E.npy",
-                "duration_seconds": 0.04
+                "duration_seconds": 2.61
             },
             "feature_dict_path": "./datasets/example_feature/feature_dic/6DHE_T_6DHE_E",
-            "timestamp": "2025-12-05 20:10:29"
+            "timestamp": "2025-12-30 00:21:15"
         },
         {
             "pair_id": "7VD5_I_7VD5_C",
@@ -39,10 +39,10 @@
                 "probability": 0.9949,
                 "predicted_label": 1,
                 "ASM_path": "./output/ASM/ASM_7VD5_I_7VD5_C.npy",
-                "duration_seconds": 0.05
+                "duration_seconds": 0.24
             },
             "feature_dict_path": "./datasets/example_feature/feature_dic/7VD5_I_7VD5_C",
-            "timestamp": "2025-12-05 20:10:30"
+            "timestamp": "2025-12-30 00:21:15"
         },
         {
             "pair_id": "6FJ3_B_6FJ3_A",
@@ -51,10 +51,10 @@
                 "probability": 0.9738,
                 "predicted_label": 1,
                 "ASM_path": "./output/ASM/ASM_6FJ3_B_6FJ3_A.npy",
-                "duration_seconds": 0.07
+                "duration_seconds": 0.11
             },
             "feature_dict_path": "./datasets/example_feature/feature_dic/6FJ3_B_6FJ3_A",
-            "timestamp": "2025-12-05 20:10:30"
+            "timestamp": "2025-12-30 00:21:15"
         },
         {
             "pair_id": "4ONF_C_4ONF_A",
@@ -63,10 +63,10 @@
                 "probability": 0.9121,
                 "predicted_label": 1,
                 "ASM_path": "./output/ASM/ASM_4ONF_C_4ONF_A.npy",
-                "duration_seconds": 0.03
+                "duration_seconds": 0.07
             },
             "feature_dict_path": "./datasets/example_feature/feature_dic/4ONF_C_4ONF_A",
-            "timestamp": "2025-12-05 20:10:30"
+            "timestamp": "2025-12-30 00:21:16"
         },
         {
             "pair_id": "4YUU_LA_4CC2_A",
@@ -75,10 +75,10 @@
                 "probability": 0.0,
                 "predicted_label": 0,
                 "ASM_path": "./output/ASM/ASM_4YUU_LA_4CC2_A.npy",
-                "duration_seconds": 0.03
+                "duration_seconds": 0.04
             },
             "feature_dict_path": "./datasets/example_feature/feature_dic/4YUU_LA_4CC2_A",
-            "timestamp": "2025-12-05 20:10:30"
+            "timestamp": "2025-12-30 00:21:16"
         },
         {
             "pair_id": "3WU2_CA_6G3J_A",
@@ -87,10 +87,10 @@
                 "probability": 0.0,
                 "predicted_label": 0,
                 "ASM_path": "./output/ASM/ASM_3WU2_CA_6G3J_A.npy",
-                "duration_seconds": 0.04
+                "duration_seconds": 0.08
             },
             "feature_dict_path": "./datasets/example_feature/feature_dic/3WU2_CA_6G3J_A",
-            "timestamp": "2025-12-05 20:10:30"
+            "timestamp": "2025-12-30 00:21:16"
         },
         {
             "pair_id": "7M5D_GB_1OCR_C",
@@ -99,10 +99,10 @@
                 "probability": 0.018,
                 "predicted_label": 0,
                 "ASM_path": "./output/ASM/ASM_7M5D_GB_1OCR_C.npy",
-                "duration_seconds": 0.03
+                "duration_seconds": 0.08
             },
             "feature_dict_path": "./datasets/example_feature/feature_dic/7M5D_GB_1OCR_C",
-            "timestamp": "2025-12-05 20:10:30"
+            "timestamp": "2025-12-30 00:21:16"
         },
         {
             "pair_id": "4Y6V_CA_6WQU_C",
@@ -111,10 +111,10 @@
                 "probability": 0.032,
                 "predicted_label": 0,
                 "ASM_path": "./output/ASM/ASM_4Y6V_CA_6WQU_C.npy",
-                "duration_seconds": 0.05
+                "duration_seconds": 0.1
             },
             "feature_dict_path": "./datasets/example_feature/feature_dic/4Y6V_CA_6WQU_C",
-            "timestamp": "2025-12-05 20:10:30"
+            "timestamp": "2025-12-30 00:21:16"
         },
         {
             "pair_id": "7JQB_AA_4KV4_A",
@@ -126,7 +126,7 @@
                 "duration_seconds": 0.03
             },
             "feature_dict_path": "./datasets/example_feature/feature_dic/7JQB_AA_4KV4_A",
-            "timestamp": "2025-12-05 20:10:30"
+            "timestamp": "2025-12-30 00:21:16"
         }
     ]
 }
