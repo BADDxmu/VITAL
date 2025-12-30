@@ -71,12 +71,9 @@ cp utils/ dataset_inference.py  SPOT_1D_Single/dataset
 cp utils/main.py SPOT_1D_Single
 cd ..
 ```
-
+Then download the pretrained model weights manually from the official [SPOT-1D-Single repository](https://github.com/jas-preet/SPOT-1D-Single)
 **Note**: If you encounter the `mkl-service_error` error, please ensure the following environment variables are set:
-    ```text
-    export MKL_THREADING_LAYER=GNU
-    export MKL_SERVICE_FORCE_INTEL=1
-    ```
+`export MKL_THREADING_LAYER=GNU`, `export MKL_SERVICE_FORCE_INTEL=1`
 
 ##### 3.3 Install ESM and download pretrained models
 ```text
@@ -165,6 +162,7 @@ The inference script will:
 
 ## Web server <a name="server"></a>
 You can access and use VITAL through the [VITAL-web-server](https://www.vital-peppi.online/).
+
 
 
 
