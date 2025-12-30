@@ -20,7 +20,7 @@ def feature_dic():
     args = parser()
 
     # path_load = args.load_fasta
-    path_save = args.save_path
+    path_save = args.save_path.strip() 
     
     padding_segment.padding_segment(load_list=args.load_list, path_load=args.load_fasta)
     print('ESM2 start')
