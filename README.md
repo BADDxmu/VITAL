@@ -13,6 +13,7 @@ VITAL is a deep learning framework that co-learns local structural geometries an
     - [Installation](#install)
     - [Feature extraction](#feature)
     - [Inference](#inference)
+	- [DeSite and BSU](#DeSite_BSU)
 - [Web server](#server)
 </details>
 
@@ -26,6 +27,7 @@ VITAL is a deep learning framework that co-learns local structural geometries an
 * `prediction.py` - Main script for running inference
 * `run_feature.sh` - Shell script for executing the full feature extraction pipeline
 * `run_prediction.sh` - Shell script for performing model prediction
+* `DeSite_BSU.py` – Script for binding site and BSU prediction.
 
 ## Requirement <a name="require"></a>
 All experiments were conducted using PyTorch 1.12.1 and Python 3.9 on a server equipped with an NVIDIA GeForce RTX 3090 GPU (CUDA 11.4).
@@ -163,6 +165,15 @@ The inference script will:
 * Load the TorchScript model
 * Produce prediction scores and ASM for each protein–peptide pair
 * Inference results will be saved to prediction_results.csv by default.
+
+### Predict binding site and BSU <a name="DeSite_BSU"></a>
+Run the predict script:
+```text
+python DeSite_BSU.py --ASMfolder ./output/ASM/ --save ./output/DeSite_BSU_result.json
+```
+
+* `--ASMfolder` specifies the directory containing the ASM files.
+* `--save` specifies the output path for saving the final prediction results in JSON format.
 
 ## Web server <a name="server"></a>
 You can access and use VITAL through the [VITAL-web-server](https://www.vital-peppi.online/).
