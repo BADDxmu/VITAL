@@ -7,7 +7,7 @@ def parser():
     ap = argparse.ArgumentParser(description='DeSite for BSU')
 
     ap.add_argument('--ASMfolder', type=str, default='./output/ASM/', help='Read the ASM folder path.')
-    ap.add_argument('--save', type=str, default='./output/DeSite_BUS_result.json', help='Output path.')
+    ap.add_argument('--save', type=str, default='./output/DeSite_BSU_result.json', help='Output path.')
 
     args = ap.parse_args()
     return args
