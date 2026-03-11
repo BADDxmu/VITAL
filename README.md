@@ -14,6 +14,7 @@ VITAL is a deep learning framework that co-learns local structural geometries an
     - [Feature extraction](#feature)
     - [Inference](#inference)
 	- [DeSite and BSU](#DeSite_BSU)
+    - [Interaction Mode](#interaction_mode)
 - [Web server](#server)
 </details>
 
@@ -174,6 +175,16 @@ python DeSite_BSU.py --ASMfolder ./output/ASM/ --save ./output/DeSite_BSU_result
 
 * `--ASMfolder` specifies the directory containing the ASM files.
 * `--save` specifies the output path for saving the final prediction results in JSON format.
+
+### Identify interaction mode <a name="interaction_mode"></a>
+Run the predict script:
+```text
+python InteractionMode.py --load_list ./datasets/InteractionMode_example_list --load_PDB ./datasets/example_PDB/ --save_path ./output/InteractionModes_results/
+```
+
+* `--load_list` Input list file specifying the structures to process..
+* `--load_PDB` Directory containing the input PDB files.
+* `--save_path` Directory where the predicted results will be saved in JSON format.
 
 ## Web server <a name="server"></a>
 You can access and use VITAL through the [VITAL-web-server](https://www.vital-peppi.online/).
