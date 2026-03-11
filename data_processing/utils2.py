@@ -7,6 +7,7 @@ def parser():
     ap.add_argument('--load_list', type=str, help='Path to load list')
     ap.add_argument('--load_fasta', type=str, help='Path to load fasta folder')
     ap.add_argument('--save_path', type=str, help='Path to save features')
+    ap.add_argument('--load_PDB', type=str, help='Path to load PDB folder')
 
     args = ap.parse_args()
     return args
