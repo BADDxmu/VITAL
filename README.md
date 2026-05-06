@@ -68,13 +68,18 @@ cd ..
 ```text
 cd data_processing # Skip this step if you are already in this directory.
 git clone https://github.com/jas-preet/SPOT-1D-Single.git SPOT_1D_Single
+cd SPOT_1D_Single
+wget http://183.36.5.251:8080/sparks_downloads/servers/downloads/Resource/Protein/2_Protein_local_structure_prediction/spot_1d_single.tar.gz
+tar -xzvf spot_1d_single.tar.gz
+cp spot_1d_single/checkpoints/jits.tar.xz ./
+tar -xvf jits.tar.xz
+cd ..
 cp utils/spot1d_single2.py SPOT_1D_Single
 cp utils/__init__.py SPOT_1D_Single
 cp utils/ dataset_inference.py  SPOT_1D_Single/dataset
 cp utils/main.py SPOT_1D_Single
 cd ..
 ```
-Then download the pretrained model weights manually from the official [SPOT-1D-Single repository](https://github.com/jas-preet/SPOT-1D-Single)
 
 **Note**: If you encounter the `mkl-service_error` error, please ensure the following environment variables are set:
 ```text
@@ -93,12 +98,11 @@ To download the pretrained ESM-2 model weights, run the following commands:
 ```
 # Ensure you are in the `data_processing` directory
 mkdir ESM-2/checkpoints
-cp utils/download_weights.sh ESM-2/scripts
-cd ESM-2
-bash scripts/download_weights.sh
+cd ESM-2/checkpoints
+wget https://dl.fbaipublicfiles.com/fair-esm/models/esm2_t30_150M_UR50D.pt
+wget https://dl.fbaipublicfiles.com/fair-esm/regression/esm2_t30_150M_UR50D-contact-regression.pt
+cd ../../../
 ```
-
-**Note**: If `aria2c` is not installed, you may download the model weights (`esm2_t30_150M_UR50D-contact-regression.pt` and `esm2_t30_150M_UR50D.pt`) manually from the official [ESM repository](https://github.com/facebookresearch/esm) and place them in the `checkpoints/` directory.
 
 ### Feature extraction <a name="feature"></a>
 Before using VITAL for inference, you need to generate all required features.  
