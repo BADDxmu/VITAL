@@ -76,7 +76,7 @@ tar -xvf jits.tar.xz
 cd ..
 cp utils/spot1d_single2.py SPOT_1D_Single
 cp utils/__init__.py SPOT_1D_Single
-cp utils/ dataset_inference.py  SPOT_1D_Single/dataset
+cp utils/dataset_inference.py  SPOT_1D_Single/dataset
 cp utils/main.py SPOT_1D_Single
 cd ..
 ```
